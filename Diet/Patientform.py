@@ -1,0 +1,32 @@
+from django import forms
+
+class Patient(forms.Form):
+    fname = forms.CharField(label="First Name",required=True,widget=forms.TextInput(attrs={'class': 'form-control'}))
+    mname = forms.CharField(label="Middle name",widget=forms.TextInput(attrs={'class': 'form-control'}))
+    lname = forms.CharField(label="replace",widget=forms.TextInput(attrs={'class': 'form-control'}))
+    email = forms.EmailField(label="Email",required=True,widget=forms.TextInput(attrs={'class': 'form-control'}))
+    sex = forms.CharField(label="sex",required=True,widget=forms.TextInput(attrs={'class': 'form-control'}))
+
+class PatientHistory(forms.Form):
+      diabetes = forms.CharField(label="diabetes",required=True,widget=forms.TextInput(attrs={'class': 'form-control'}))
+      diabetes_long = forms.CharField(label="diabetes_long",required=True,widget=forms.TextInput(attrs={'class': 'form-control'}))
+      hypertension = forms.CharField(label="hypertension",required=True,widget=forms.TextInput(attrs={'class': 'form-control'}))
+      hypertension_long = forms.CharField(label="hypertension_long",required=True,widget=forms.TextInput(attrs={'class': 'form-control'}))
+      obesity = forms.CharField(label="obesity",required=True,widget=forms.TextInput(attrs={'class': 'form-control'}))
+      obesity_long = forms.CharField(label="obesity_long",required=True,widget=forms.TextInput(attrs={'class': 'form-control'}))
+      pcod = forms.CharField(label="pcod",required=True,widget=forms.TextInput(attrs={'class': 'form-control'}))
+      pcod_long = forms.CharField(label="pcod_long",required=True,widget=forms.TextInput(attrs={'class': 'form-control'}))
+      thyroid = forms.CharField(label="thyroid",required=True,widget=forms.TextInput(attrs={'class': 'form-control'}))
+      thyroid_long = forms.CharField(label="thyroid_long",required=True,widget=forms.TextInput(attrs={'class': 'form-control'}))
+      heartdiease = forms.CharField(label="heartdiease",required=True,widget=forms.TextInput(attrs={'class': 'form-control'}))
+      heartdisease_long = forms.CharField(label="heartdisease_long",required=True,widget=forms.TextInput(attrs={'class': 'form-control'}))
+      liverdisease = forms.CharField(label="liverdisease",required=True,widget=forms.TextInput(attrs={'class': 'form-control'}))
+      liverdisease_long = forms.CharField(label="liverdisease_long",required=True,widget=forms.TextInput(attrs={'class': 'form-control'}))
+      kidney = forms.CharField(label="kidney",required=True,widget=forms.TextInput(attrs={'class': 'form-control'}))
+      kidney_long = forms.CharField(label="kidney_long",required=True,widget=forms.TextInput(attrs={'class': 'form-control'}))
+      familyhistory = forms.CharField(label="familyhistory",required=True,widget=forms.TextInput(attrs={'class': 'form-control'}))
+      currentmed = forms.CharField(label="currentmed",required=True,widget=forms.TextInput(attrs={'class': 'form-control'}))
+      foodhabit = forms.CharField(label="foodhabit",required=True,widget=forms.TextInput(attrs={'class': 'form-control'}))
+      hba1c = forms.FloatField(label="hba1c",required=True,widget=forms.TextInput(attrs={'class': 'form-control'}))
+      fasting = forms.FloatField(label="fasting",required=True,widget=forms.TextInput(attrs={'class': 'form-control'}))
+      pp = forms.FloatField(label="pp",required=True,widget=forms.TextInput(attrs={'class': 'form-control'}))
