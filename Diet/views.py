@@ -5,18 +5,26 @@ from django.http import HttpResponse
 from django.template import loader
 from django.shortcuts import render
 
-def index(request):
-    template = loader.get_template('home.html')
-    context = {    }
-    return HttpResponse(template.render(context,request))
+from Diet import Patientform
+
+
+def Patient(request):
+    form = Patientform.Patient()
+    return render(request,'home1.html',{'form': form})
+
+def PatientHistory(request):
+    form = Patientform.Patient()
+    return render(request,'home2.html',{'form': form})
 
 def Dietplan(request):
     name = request.POST.get("food_hbt")
     if name == 'Veg':
-        template = loader.get_template('lowfatvegan.html')
+        form = Patientform.PatientHistory()
+        return render(request,'lowfatvegan1.html',{'form': form})
     else:
-        template = loader.get_template('lchf.html')
-    context = {    }
-    return HttpResponse(template.render(context,request))
+        form = Patientform.PatientHistory()
+        return render(request,'lchf1.html',{'form': form})
+   # context = {    }
+   # return HttpResponse(template.render(context,request))
 
 
